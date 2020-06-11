@@ -164,7 +164,13 @@ The returned object should have the following characteristics:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(number) {
+    const odo = {
+      odometer: number,
+      drive: function(distance){
+        return odo.odometer + distance;
+    },
+  }
+  return odo.drive(5);
 }
+console.log(carMaker(10));
